@@ -33,7 +33,8 @@ Using Git as Control version :
 * pushing the updates code with commit text to able to return the code easily
 
 here's my Github repository link :
-*
+*https://github.com/fatmaahmed751/Softwie.git
+
 when I face this issue:
 *The application's UI is not updating as expected after data changes:
 /first I spaerated the widgets in my screen which rely on each other to raech for the error .
