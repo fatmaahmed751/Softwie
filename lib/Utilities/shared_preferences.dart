@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:templete/core/Font/font_provider.dart';
+import 'package:softwie/core/Font/font_provider.dart';
+import '../Models/user_login_model.dart';
 import '../core/Language/app_languages.dart';
 import '../core/Theme/theme_model.dart';
-import '../Models/user_model.dart';
 
 class SharedPref{
 
@@ -20,14 +20,14 @@ class SharedPref{
 
 
 
-  static UserModel? getCurrentUser(){
+  static UserLoginModel? getCurrentUser(){
     if(prefs.getString(_currentUserKey) == null) return null;
-    return UserModel.fromJson(json.decode(prefs.getString(_currentUserKey)!));
+    return UserLoginModel.formJson(json.decode(prefs.getString(_currentUserKey)!));
   }
 
-  static Future<bool> saveCurrentUser({required UserModel user})async{
-    return await prefs.setString(_currentUserKey, json.encode(user.toJson()));
-  }
+  // static Future<bool> saveCurrentUser({required UserLoginModel user})async{
+  //   return await prefs.setString(_currentUserKey, json.encode(user()));
+  // }
 
   static bool isLogin()=> prefs.getString(_currentUserKey) != null;
 

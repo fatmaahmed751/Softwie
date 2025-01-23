@@ -10,18 +10,24 @@ class ThemeClass extends ThemeModel{
 
 
   static List<Color> get backgroundGradiant => const [
-    Color.fromRGBO(241, 128, 107, 0.19),
-    Color.fromRGBO(236, 174, 114, 0.28),
-    Color.fromRGBO(244, 201, 150, 0.23),
-    Color.fromRGBO(163, 114, 80, 0.25),
-    Color.fromRGBO(210, 199, 238, 0.22),
-    Color.fromRGBO(254, 242, 205, 0.69),
+    const Color(0xff525252),
+    Colors.white70,
+    // Color.fromRGBO(236, 174, 114, 0.28),
+    // Color.fromRGBO(244, 201, 150, 0.23),
+    // Color.fromRGBO(163, 114, 80, 0.25),
+    // Color.fromRGBO(210, 199, 238, 0.22),
+    // Color.fromRGBO(254, 242, 205, 0.69),
   ];
+  static List<Color> get textGradientColor=>const[
+    Color.fromRGBO(23, 38, 54, 1),
+    Color.fromRGBO(229, 171, 80, 1),
+    Color.fromRGBO(229, 171, 80, 1),
 
+  ];
   ThemeClass.lightTheme({
     super.isDark = false,
     super.background = const Color(0xffFFFFFF),
-    super.primaryColor = const Color(0xffFF7622),
+    super.primaryColor = const Color(0xFF7E57C2),
     super.mainSecondary = const Color(0xff1B1F2F),
     super.secondary = const Color(0xffF5F6FA),
     super.labelColor = const Color(0xffDCDCDC),
@@ -36,7 +42,7 @@ class ThemeClass extends ThemeModel{
   ThemeClass.darkTheme({
     super.isDark = true,
     super.background = const Color(0xffFFFFFF),
-    super.primaryColor = const Color(0xffFF7622),
+    super.primaryColor = const Color(0xFF7E57C2),
     super.mainSecondary = const Color(0xff1B1F2F),
     super.secondary = const Color(0xffF5F6FA),
     super.success = const Color(0xff00B060),

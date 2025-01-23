@@ -1,7 +1,10 @@
-import 'package:templete/Modules/Splash/splash_controller.dart';
+
+import 'package:softwie/Modules/Splash/splash_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
+import '../../Utilities/theme_helper.dart';
+import '../../generated/assets.dart';
 
 class SplashScreen extends StatefulWidget {
   static const routeName = "/";
@@ -29,16 +32,22 @@ class _SplashScreenState extends StateMVC<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset("logo path", width: 240.r, height: 240.r,),
-            SizedBox(height: 100.h,),
-            const CircularProgressIndicator(),
-          ],
+      body:Container(
+        decoration: BoxDecoration(
+        gradient:   LinearGradient(
+            colors:ThemeClass.backgroundGradiant,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
         ),
-      ),
+        width:double.infinity ,
+        height:double.infinity ,
+        child: Padding(
+          padding: EdgeInsetsDirectional.symmetric(
+              horizontal: 24.w, vertical: 20.h),
+          child:Image.asset(Assets.imagesSoftwie, width: 240.r, height: 240.r,),
+        ),
+      )
     );
   }
 }

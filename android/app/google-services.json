@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "902816100987",
+    "project_id": "softwie-98760",
+    "storage_bucket": "softwie-98760.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902816100987:android:9342e52f9d26ab4e69a8de",
+        "android_client_info": {
+          "package_name": "com.example.softwie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxh9FKp_oIjmol3nm6_3Jc8F-_vHK3Bt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

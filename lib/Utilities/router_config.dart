@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../Modules/Home/Home_screen.dart';
+import '../Modules/Register/register_screen.dart';
 import '../Modules/Splash/splash_screen.dart';
+import '../Modules/login/login_screen.dart';
 BuildContext? get currentContext_ => GoRouterConfig.router.routerDelegate.navigatorKey.currentContext;
 class GoRouterConfig{
   static GoRouter get router => _router;
@@ -12,6 +15,39 @@ class GoRouterConfig{
           return getCustomTransitionPage(
             state: state,
             child: const SplashScreen(),
+          );
+        },
+        routes: const <RouteBase>[],
+      ),
+      GoRoute(
+        name: HomeScreen.routeName,
+        path: "/${HomeScreen.routeName}",
+        pageBuilder: (_, GoRouterState state) {
+          return getCustomTransitionPage(
+            state: state,
+            child:  const HomeScreen(),
+          );
+        },
+        routes: const <RouteBase>[],
+      ),
+      GoRoute(
+        name: LoginScreen.routeName,
+        path: "/${LoginScreen.routeName}",
+        pageBuilder: (_, GoRouterState state) {
+          return getCustomTransitionPage(
+            state: state,
+            child:  const LoginScreen(),
+          );
+        },
+        routes: const <RouteBase>[],
+      ),
+      GoRoute(
+        name: RegisterScreen.routeName,
+        path: "/${RegisterScreen.routeName}",
+        pageBuilder: (_, GoRouterState state) {
+          return getCustomTransitionPage(
+            state: state,
+            child:  const RegisterScreen(),
           );
         },
         routes: const <RouteBase>[],

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:templete/Utilities/theme_helper.dart';
+import 'package:softwie/Utilities/theme_helper.dart';
 
 import '../core/Font/font_provider.dart';
 
@@ -30,6 +30,7 @@ class TextStyleHelper{
   TextStyle get h1_20 => getTextStyle(fontSize: 20,fontWeight: FontWeight.w700);
 
 
+  TextStyle get h_30 => getTextStyle(fontSize: 30,fontWeight: FontWeight.w800);
 
 
   TextStyle get h_24 => getTextStyle(fontSize: 24,fontWeight: FontWeight.w700);

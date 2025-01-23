@@ -32,11 +32,11 @@ class GenericRequest<T> {
     } else {
       response = await method.requestJson();
     }
-    if (response["Data"] is! Map) {
+    if (response["items"] is! Map) {
       throw errorModel(response,"data is not compatible with expected data",ExpectType.object);
     }
     try{
-      T result = fromMap(response["Data"]);
+      T result = fromMap(response["items"]);
       if(T is ModelValidation){
         String? validateError = (result as ModelValidation).validate();
         if(validateError!=null) throw errorModel(response,validateError,ExpectType.object);
@@ -54,8 +54,8 @@ class GenericRequest<T> {
     } else {
       response = await method.requestJson();
     }
-    if (!(response["Data"] is List || response["Data"]["Data"] is List)) throw errorModel(response,"data is not compatible with expected data",ExpectType.list);
-    final responseList = (response["Data"] is List)? response["Data"] : response["Data"]["Data"];
+    if (!(response["items"] is List || response["items"]["items"] is List)) throw errorModel(response,"data is not compatible with expected data",ExpectType.list);
+    final responseList = (response["items"] is List)? response["items"] : response["items"]["items"];
     try{
       List<T> resultList =  List<T>.from(responseList.map((e) => fromMap(e)));
       if(T is ModelValidation){
