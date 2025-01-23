@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
+import 'package:softwie/Modules/Home/home_screen.dart';
 
 import '../../../Models/user_login_model.dart';
 import '../../../Utilities/text_style_helper.dart';
@@ -117,7 +118,6 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            //   context.pushNamed(ForgetPasswordScreen.routeName);
                           },
                           child: Text(
                             "forgetPassword ?",
@@ -141,6 +141,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
 
                           );
                           print(model!.email);
+                          GoRouter.of(context).pushNamed(HomeScreen.routeName);
                         } else {
                           setState(() {
                             autoValidate = true;

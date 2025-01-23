@@ -4,6 +4,7 @@ import '../Modules/Home/Home_screen.dart';
 import '../Modules/Register/register_screen.dart';
 import '../Modules/Splash/splash_screen.dart';
 import '../Modules/login/login_screen.dart';
+import '../Modules/market_place/presentation/view/products_screen.dart';
 BuildContext? get currentContext_ => GoRouterConfig.router.routerDelegate.navigatorKey.currentContext;
 class GoRouterConfig{
   static GoRouter get router => _router;
@@ -48,6 +49,17 @@ class GoRouterConfig{
           return getCustomTransitionPage(
             state: state,
             child:  const RegisterScreen(),
+          );
+        },
+        routes: const <RouteBase>[],
+      ),
+      GoRoute(
+        name: ProductsScreen.routeName,
+        path: "/${ProductsScreen.routeName}",
+        pageBuilder: (_, GoRouterState state) {
+          return getCustomTransitionPage(
+            state: state,
+            child:  const ProductsScreen(),
           );
         },
         routes: const <RouteBase>[],

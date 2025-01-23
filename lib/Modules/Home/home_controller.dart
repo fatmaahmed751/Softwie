@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../Models/best_seller_books_model.dart';
+import '../../Utilities/router_config.dart';
+import '../../Widgets/alert_submmit_success_widget.dart';
 import '../../Widgets/home_carusol_widget.dart';
 import 'home_data_handler.dart';
 
@@ -49,23 +51,35 @@ class HomeController extends ControllerMVC {
 //   "/selectScreen"
 // ];
 
-  Future<void> fetchBestSellerBooks() async {
-    final result = await BestSellerDataHandler.fetchBestSellerModel();
-    result.fold(
-          (failure) {
-        // Handle failure
-        print("Error: ${failure.toString()}");
-      },
-            (r) async {
-              bestSellerBooks=r;
-        });
-        //   (books) {
-        // setState(() {
-        //   bestSellerBooks = books;
-        // });
-    //  },
-   // );
+  // Future<void> fetchBestSellerBooks() async {
+  //   final result = await BestSellerDataHandler.fetchBestSellerModel();
+  //   result.fold(
+  //         (failure) {
+  //       // Handle failure
+  //       print("Error: ${failure.toString()}");
+  //     },
+  //           (r) async {
+  //             bestSellerBooks=r;
+  //       });
+  //       //   (books) {
+  //       // setState(() {
+  //       //   bestSellerBooks = books;
+  //       // });
+  //   //  },
+  //  // );
+  // }
+  sendRequestSuccessfully()async {
+    showDialog(
+      context: currentContext_!,
+      builder: (context) =>
+          const AlertSummitedSuccessfully(
+            firstText: "Request Submitted",
+            secondText:"weWillContact",
+          ),
+    );
+    await Future.delayed(const Duration(milliseconds: 10));
   }
+
   final List<CarouselData> carouselData = [
     CarouselData(
       imagePath:"https://softwie.com/wp-content/uploads/2024/11/video-banner-img-01-1024x373.jpg",

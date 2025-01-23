@@ -45,7 +45,7 @@ class _SplashScreenState extends StateMVC<SplashScreen> {
         child: Padding(
           padding: EdgeInsetsDirectional.symmetric(
               horizontal: 24.w, vertical: 20.h),
-          child:Image.asset(Assets.imagesSoftwie, width: 240.r, height: 240.r,),
+          child:Image.asset(Assets.imagesSoftwie, width: 240.w, height: 440.h,),
         ),
       )
     );
