@@ -4,8 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
-
-import '../../Utilities/text_style_helper.dart';
 import '../../Utilities/theme_helper.dart';
 import '../../Widgets/custom_app_bar_widget.dart';
 import '../../Widgets/custom_service_text.dart';
@@ -69,7 +67,7 @@ class _HomeScreenState extends StateMVC<HomeScreen> {
                   left: 0,
                   right: 0,
                   child: CustomAppBarWidget.mainScreen(
-                    title: "Welcome Dear ",
+                    title: "Welcome ",
                      onPressed: () {
                        context.pushNamed(NotificationsScreen.routeName);
                      },

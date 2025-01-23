@@ -3,16 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:softwie/Modules/Notifications/widgets/notification_item.dart';
-import '../../../Utilities/strings.dart';
 import '../../../Widgets/custom_app_bar_widget.dart';
 import '../../../Widgets/loading_screen.dart';
-import '../../Utilities/theme_helper.dart';
 import 'notifications_controller.dart';
 
 class NotificationsScreen extends StatefulWidget {
   static const routeName = "Notifications";
-
-
   const NotificationsScreen({
     super.key,
   });

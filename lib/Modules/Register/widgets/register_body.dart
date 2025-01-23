@@ -208,11 +208,10 @@ class _RegisterScreenBodyState extends State<RegisterScreenBody> {
                   Center(
                     child: GestureDetector(
                       onTap: () {
-                        //con.loginByGmail(context);
                       },
                       child: const TransparentBorderButton(
                         text: "continueUsingApple",
-                        pic: Assets.imagesGoogleIcon,
+                        pic: Assets.imagesAppleImage,
                       ),
                     ),
                   ),

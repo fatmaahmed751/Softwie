@@ -1,12 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
-
-import '../../Models/best_seller_books_model.dart';
 import '../../Utilities/router_config.dart';
 import '../../Widgets/alert_submmit_success_widget.dart';
 import '../../Widgets/home_carusol_widget.dart';
-import 'home_data_handler.dart';
 
 
 
@@ -20,54 +17,8 @@ class HomeController extends ControllerMVC {
   static HomeController? _this;
 
   HomeController._();
-  List<BestSellerModel> bestSellerBooks = [];
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   int selectedIndex = 0;
-// late List<String> items ;
-// void updateItems() {
-//   setState(() {
-//     items = [
-//       Strings.home.tr,
-//       Strings.projectDetails.tr,
-//       Strings.projectTime.tr,
-//       Strings.projectChat.tr,
-//       Strings.meetings.tr,
-//       Strings.complaints.tr,
-//       Strings.history.tr,
-//       Strings.languages.tr,
-//       Strings.logOut.tr,
-//     ];
-//   });
-// }
-// final List<String> routes = [
-//   "/HomeScreen",
-//   "/ProjectDetailsScreen",
-//   "/ProjectTimeLineScreen",
-//   "/ProjectChatScreen",
-//   "/meetings",
-//   "/complaints",
-//   "/history",
-//   "/clientLanguage",
-//   "/selectScreen"
-// ];
-
-  // Future<void> fetchBestSellerBooks() async {
-  //   final result = await BestSellerDataHandler.fetchBestSellerModel();
-  //   result.fold(
-  //         (failure) {
-  //       // Handle failure
-  //       print("Error: ${failure.toString()}");
-  //     },
-  //           (r) async {
-  //             bestSellerBooks=r;
-  //       });
-  //       //   (books) {
-  //       // setState(() {
-  //       //   bestSellerBooks = books;
-  //       // });
-  //   //  },
-  //  // );
-  // }
   sendRequestSuccessfully()async {
     showDialog(
       context: currentContext_!,
@@ -86,9 +37,7 @@ class HomeController extends ControllerMVC {
       title: "AI SERVICES",
       subtitle: "BE One Of Our Team",
       buttonText: "Join Now",
-
       onButtonPressed: () {
-        //currentContext_!.pushNamed(BeAPartnerScreen.routeName);
       },
       textAlign: TextAlign.start,
     ),
@@ -98,7 +47,6 @@ class HomeController extends ControllerMVC {
       subtitle: "BE One Of Our Team",
       buttonText: "Join Now",
       onButtonPressed: () {
-       // currentContext_!.pushNamed(CareerApplicationScreen.routeName);
       },
       textAlign: TextAlign.center,
     ),
@@ -108,13 +56,10 @@ class HomeController extends ControllerMVC {
       subtitle: "BE One Of Our Team",
       buttonText: "Join Now",
       onButtonPressed: () {
-       // print("Learn More pressed");
       },
       textAlign: TextAlign.right,
     ),
   ];
-
-
 
 
   int activeIndex = 0;

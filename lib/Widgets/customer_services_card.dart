@@ -110,6 +110,7 @@ class AdditionalServiceCard extends StatelessWidget {
                     color:ThemeClass.of(context).primaryColor)
             ),
             Gap(10.h),
+            Gap(10.h),
             ElevatedButton(
               onPressed: onPressed,
               style: ElevatedButton.styleFrom(

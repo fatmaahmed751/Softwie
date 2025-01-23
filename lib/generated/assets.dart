@@ -4,8 +4,10 @@ class Assets {
 
   static const String i18nAr = 'i18n/ar.json';
   static const String i18nEn = 'i18n/en.json';
+  static const String imagesAppleImage = 'assets/images/appleImage.png';
   static const String imagesBell = 'assets/images/bell.png';
   static const String imagesBrush = 'assets/images/brush.svg';
+  static const String imagesCircle = 'assets/images/circle.png';
   static const String imagesDarkMode = 'assets/images/darkMode.svg';
   static const String imagesEmail = 'assets/images/email.png';
   static const String imagesGoogle = 'assets/images/google.png';
@@ -16,5 +18,7 @@ class Assets {
   static const String imagesSee = 'assets/images/see.png';
   static const String imagesSoftwie = 'assets/images/softwie.png';
   static const String imagesSoftwieLogo = 'assets/images/softwieLogo.png';
+  static const String imagesUnKnow = 'assets/images/unKnow.jpg';
+  static const String imagesUser = 'assets/images/user.png';
 
 }

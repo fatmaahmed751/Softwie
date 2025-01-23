@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:softwie/Modules/Notifications/notification_screen.dart';
-import 'package:softwie/Modules/Notifications/notification_screen.dart';
-import 'package:softwie/Modules/Notifications/notification_screen.dart';
+import 'package:softwie/Modules/profile/profile_screen.dart';
 import '../Modules/Home/Home_screen.dart';
 import '../Modules/Register/register_screen.dart';
 import '../Modules/Splash/splash_screen.dart';
@@ -74,6 +73,17 @@ class GoRouterConfig{
           return getCustomTransitionPage(
             state: state,
             child:  const NotificationsScreen(),
+          );
+        },
+        routes: const <RouteBase>[],
+      ),
+      GoRoute(
+        name: ProfileScreen.routeName,
+        path: "/${ProfileScreen.routeName}",
+        pageBuilder: (_, GoRouterState state) {
+          return getCustomTransitionPage(
+            state: state,
+            child:  const ProfileScreen(),
           );
         },
         routes: const <RouteBase>[],

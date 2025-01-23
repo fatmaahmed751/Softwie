@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:softwie/Modules/Register/manager/register_states.dart';
 import 'dart:async';
 import '../../../Models/user_register_model.dart';
+import '../../../generated/assets.dart';
 import '../../login/data/repos/login_and_register_repo.dart';
 
 
@@ -46,7 +47,7 @@ class UserRegisterCubit extends Cubit<UserRegisterStates> {
   FirebaseAuth auth = FirebaseAuth.instance;
 
   File? file;
-  String profileImageUrl = '';
+  String profileImageUrl = Assets.imagesSoftwie;
   Future getImage() async {
     final ImagePicker picker = ImagePicker();
     final XFile? image = await picker.pickImage(source: ImageSource.gallery);
@@ -75,7 +76,7 @@ class UserRegisterCubit extends Cubit<UserRegisterStates> {
   }
 
   File? coverImageOfUser;
-  String coverImageUrl = '';
+  String coverImageUrl = Assets.imagesSoftwie;
 
 
   UserRegisterModel userRegisterModel = UserRegisterModel();

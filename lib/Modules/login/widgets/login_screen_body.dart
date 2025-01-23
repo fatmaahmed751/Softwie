@@ -196,7 +196,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                         },
                         child: const TransparentBorderButton(
                           text: "continueUsingApple",
-                          pic: Assets.imagesGoogleIcon,
+                          pic: Assets.imagesAppleImage,
                         ),
                       ),
                     ),

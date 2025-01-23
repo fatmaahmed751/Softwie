@@ -4,8 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import '../Modules/Notifications/notification_screen.dart';
+import '../Modules/profile/profile_screen.dart';
 import '../Utilities/shared_preferences.dart';
 import '../Utilities/theme_helper.dart';
+import '../generated/assets.dart';
 import 'custom_app_bar_main_text.dart';
 import 'custom_gradient_text.dart';
 
@@ -151,6 +153,16 @@ class MainAppBarWidget extends StatelessWidget {
               },
               child: Image.asset(icon,height: 25,
               color: Colors.white70,)),
+          Gap(5.w),
+          GestureDetector(
+              onTap: (){
+                context.pushNamed(ProfileScreen.routeName);
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Image.asset(Assets.imagesUser,height: 28,
+                  color: Colors.white70,  ),
+              )),
           Gap(20.w)
         ],
       ),
