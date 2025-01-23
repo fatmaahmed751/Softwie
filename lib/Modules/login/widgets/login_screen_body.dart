@@ -34,7 +34,6 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
   TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    // UserLoginCubit cubit = UserLoginCubit.get(context);
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -123,7 +122,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                             "forgetPassword ?",
                             textAlign: TextAlign.left,
                             style: TextStyleHelper.of(context).b_16.copyWith(
-                                color: ThemeClass.of(context).primaryColor),
+                                color: ThemeClass.of(context).mainSecondary),
                           ),
                         ),
                       ],

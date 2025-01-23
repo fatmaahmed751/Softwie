@@ -51,7 +51,7 @@ class TransparentBorderButton extends StatelessWidget {
             text,
             textAlign: TextAlign.left,
             style: TextStyleHelper.of(context).b_20.copyWith(
-              color: ThemeClass.of(context).mainBlack,
+              color: ThemeClass.of(context).labelColor,
             ),
           ),
           // SvgPicture.asset(pic),

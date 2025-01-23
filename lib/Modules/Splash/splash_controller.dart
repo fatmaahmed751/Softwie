@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:softwie/Modules/Splash/splash_data_handler.dart';
-import '../Home/Home_screen.dart';
+import '../login/login_screen.dart';
 
 class SplashController extends ControllerMVC {
   // singleton
@@ -19,7 +19,7 @@ class SplashController extends ControllerMVC {
     await SplashDataHandler.getCurrentUser();
     await Future.delayed(const Duration(seconds:6));
     if(context.mounted) {
-  GoRouter.of(context).pushNamed(HomeScreen.routeName);
+  GoRouter.of(context).pushNamed(LoginScreen.routeName);
 
     }
   }
