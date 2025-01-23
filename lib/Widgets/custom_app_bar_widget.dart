@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
+import '../Modules/Notifications/notification_screen.dart';
 import '../Utilities/shared_preferences.dart';
 import '../Utilities/theme_helper.dart';
 import 'custom_app_bar_main_text.dart';
@@ -146,7 +147,7 @@ class MainAppBarWidget extends StatelessWidget {
           const Spacer(),
           GestureDetector(
               onTap: (){
-            // context.pushNamed(NotificationsScreen.routeName);
+           context.pushNamed(NotificationsScreen.routeName);
               },
               child: Image.asset(icon,height: 25,
               color: Colors.white70,)),
@@ -230,9 +231,8 @@ class SecondaryAppBarWidget extends StatelessWidget {
                 ThemeClass.of(context).background.withOpacity(0.20),
                 child: Transform.flip(
                   flipX: SharedPref.getCurrentLanguage() == "ar" ? true : false,
-                  child: SvgPicture.asset(
-                  ""
-                  ),
+                  child: Icon(Icons.arrow_back_ios_rounded,
+                  color: ThemeClass.of(context).secondaryBlackColor,)
                 ),
               ),
             ),

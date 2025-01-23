@@ -37,25 +37,17 @@ class ProductsScreenDetails extends StatelessWidget {
                       text: 'MarketPlace',
                      ),
                 const Spacer(),
-                  IconButton(
-                    onPressed: (){},
-                    icon:
-                     Icon(
+                  const Icon(
                     Icons.location_on_outlined,
-                      color: ThemeClass.of(context).labelColor,
-                      size: 35.h,
-                    ),
-
+                    color: Colors.white70,
+                    size: 25,
                   ),
 
                   IconButton(
                     onPressed: (){},
                     icon:   Image.asset(Assets.imagesBell,
-                    height: 37.h,
-                    color: ThemeClass.of(context).labelColor,)
-                    // icon:const Icon(FontAwesomeFontAwesome.houseUser) ,
-                  )
-
+                      height: 25,
+                    color: Colors.white70,))
                 ],
               ),
               const SizedBox(height:10),

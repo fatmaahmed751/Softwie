@@ -201,7 +201,7 @@ class _RegisterScreenBodyState extends State<RegisterScreenBody> {
                       },
                       child: const TransparentBorderButton(
                         text: "continueUsingGoogle",
-                        pic: Assets.imagesGoogle,
+                        pic: Assets.imagesGoogleIcon,
                       ),
                     ),
                   ),
@@ -212,7 +212,7 @@ class _RegisterScreenBodyState extends State<RegisterScreenBody> {
                       },
                       child: const TransparentBorderButton(
                         text: "continueUsingApple",
-                        pic: Assets.imagesGoogle,
+                        pic: Assets.imagesGoogleIcon,
                       ),
                     ),
                   ),

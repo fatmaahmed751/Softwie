@@ -97,7 +97,7 @@ class CustomTextFieldWidget extends StatelessWidget {
           border: getBorder(radius: borderRadiusValue,color: focusedBorderColor),
           isDense: isDense ?? false,
           prefixIconConstraints: BoxConstraints(
-              minWidth: prefixIcon == null ? 0 : 48.w, maxHeight: 48.w),
+              minWidth: prefixIcon == null ? 0 : 48.w, maxHeight: 48.h),
           suffixIconConstraints: BoxConstraints(
               minWidth: suffixIcon == null ? 0 : 48.w, maxHeight: 24.h),
           // contentPadding: insidePadding ?? EdgeInsets.symmetric(vertical: 21.h),
@@ -112,7 +112,7 @@ class CustomTextFieldWidget extends StatelessWidget {
             highlightColor: Colors.transparent,
             child: SizedBox(width: 30.w,height: 60.h, child: suffixIcon),
           ),
-          contentPadding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 16.w), // Adjusted padding
+          contentPadding: EdgeInsets.only(top:35.h, right: 16.w), // Adjusted padding
 
           hintStyle: hintStyle ?? TextStyleHelper.of(context).b_16.copyWith(color: ThemeClass.of(context).secondary),),
 

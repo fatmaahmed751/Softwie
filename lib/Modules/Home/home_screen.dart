@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../Utilities/text_style_helper.dart';
@@ -12,7 +13,7 @@ import '../../Widgets/customer_services_card.dart';
 import '../../Widgets/home_carusol_widget.dart';
 import '../../Widgets/loading_screen.dart';
 import '../../generated/assets.dart';
-import '../Best_seller/widgets/best_seller_list.dart';
+import '../Notifications/notification_screen.dart';
 import 'home_controller.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -36,24 +37,11 @@ class _HomeScreenState extends StateMVC<HomeScreen> {
     // con.updateItems();
   }
 
-  void toggleDrawer() {
-    if (con.scaffoldKey.currentState!.isDrawerOpen) {
-      Navigator.of(context).pop(); // Close the drawer
-    } else {
-      con.scaffoldKey.currentState!.openDrawer(); // Open the drawer
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      // key: con.scaffoldKey,
-      // drawer: CustomDrawerWidget(
-      //   initialIndex:con.selectedIndex,
-      //   items: con.items,
-      //   routes:con.routes,
-      // ),
       body: LoadingScreen(
         loading: con.loading,
         child: Column(children: [
@@ -62,11 +50,11 @@ class _HomeScreenState extends StateMVC<HomeScreen> {
             child: Stack(
               children: [
                 Container(
-                  height: 280.h,
+                  height: 260.h,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: ThemeClass.backgroundGradiant,
+                      colors: ThemeClass.secondBackground,
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     ),
@@ -76,23 +64,26 @@ class _HomeScreenState extends StateMVC<HomeScreen> {
                     ),
                   ),
                 ),
-                Positioned(
-                  top: 0,
+                 Positioned(
+                  top: 13,
                   left: 0,
                   right: 0,
                   child: CustomAppBarWidget.mainScreen(
-                    title: "Welcome ",
+                    title: "Welcome Dear ",
+                     onPressed: () {
+                       context.pushNamed(NotificationsScreen.routeName);
+                     },
+
                     icon: Assets.imagesBell,
-                    onPressed: toggleDrawer,
                   ),
                 ),
                 Positioned(
-                  bottom: -1, // Overlapping with the next section
+                  bottom: 0,
                   left: 0,
                   right: 0,
                   child: Center(
                     child: SizedBox(
-                      height: 248.h,
+                      height: 260.h,
                       child: HomeCarouselWidget(
                         carouselItems: con.carouselData,
                         activeIndex: con.activeIndex,
@@ -113,7 +104,7 @@ class _HomeScreenState extends StateMVC<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Gap(15.h),
+                  Gap(5.h),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 24.w),
                     child: Column(

@@ -35,9 +35,9 @@ class _SplashScreenState extends StateMVC<SplashScreen> {
       body:Container(
         decoration: BoxDecoration(
         gradient:   LinearGradient(
-            colors:ThemeClass.backgroundGradiant,
+            colors:ThemeClass.secondBackground,
             begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            end: Alignment.bottomRight,
           ),
         ),
         width:double.infinity ,
@@ -45,7 +45,8 @@ class _SplashScreenState extends StateMVC<SplashScreen> {
         child: Padding(
           padding: EdgeInsetsDirectional.symmetric(
               horizontal: 24.w, vertical: 20.h),
-          child:Image.asset(Assets.imagesSoftwie, width: 240.w, height: 440.h,),
+          child:Image.asset(Assets.imagesSoftwie, width: 400.w, height:480.h,
+        ),
         ),
       )
     );

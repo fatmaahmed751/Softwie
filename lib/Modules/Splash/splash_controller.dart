@@ -19,14 +19,10 @@ class SplashController extends ControllerMVC {
 
   Future init(BuildContext context)async{
     await SplashDataHandler.getCurrentUser();
-    await Future.delayed(const Duration(seconds: 5));
+    await Future.delayed(const Duration(seconds:6));
     if(context.mounted) {
-     GoRouter.of(context).pushNamed(HomeScreen.routeName);
-      if(SharedPref.isLogin()){
-        // GoRouter.of(context).goNamed(HomeScreen.routeName);
-      }else{
-        // GoRouter.of(context).go(LoginScreen.routeName);
-      }
+  GoRouter.of(context).pushNamed(LoginScreen.routeName);
+
     }
   }
 }

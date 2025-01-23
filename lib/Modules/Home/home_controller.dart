@@ -93,7 +93,7 @@ class HomeController extends ControllerMVC {
       textAlign: TextAlign.start,
     ),
     CarouselData(
-      imagePath:"https://www.freepik.com/premium-ai-image/robot-with-blue-background-with-words-robot-left-side_220678532.htm",
+      imagePath:"https://img.freepik.com/premium-psd/particle-connection-network-transparent-background_1111860-543.jpg",
       title: "Development Services",
       subtitle: "BE One Of Our Team",
       buttonText: "Join Now",

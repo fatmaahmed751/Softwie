@@ -38,7 +38,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        height: 760,
+        //height: 760,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: ThemeClass.backgroundGradiant,
@@ -71,17 +71,17 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                     Gap(10.h),
                     CustomTextFieldWidget(
                       height: 55.h,
-                      hint: "enterEmail",
+                      hint: "Enter Email",
                       hintStyle: TextStyle(
                         color: ThemeClass.of(context).secondaryBlackColor,
                       ),
                       prefixIcon: Image.asset(
                         Assets.imagesEmail,
-                        height: 28.h,
+                        height: 26.h,
                         width: 25.w,
                       ),
                       isDense: true,
-                      insidePadding: EdgeInsets.symmetric(vertical: 15.h),
+                      //insidePadding: EdgeInsets.only(top:15.h),
                       backGroundColor: ThemeClass.of(context).background,
                       controller: emailController,
                       validator: (v) => Validate.validateEmail(v),
@@ -92,7 +92,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                     CustomTextFieldWidget(
                       height: 60.h,
                       obscure: isPassword,
-                      hint: "enterPassword",
+                      hint: "Enter Password",
                       hintStyle: TextStyle(
                         color: ThemeClass.of(context).secondaryBlackColor,
                       ),
@@ -185,7 +185,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                         },
                         child: const TransparentBorderButton(
                           text: "continueUsingGoogle",
-                          pic: Assets.imagesGoogle,
+                          pic: Assets.imagesGoogleIcon,
                         ),
                       ),
                     ),
@@ -196,7 +196,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                         },
                         child: const TransparentBorderButton(
                           text: "continueUsingApple",
-                          pic: Assets.imagesGoogle,
+                          pic: Assets.imagesGoogleIcon,
                         ),
                       ),
                     ),

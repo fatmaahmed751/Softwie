@@ -9,10 +9,12 @@ class Assets {
   static const String imagesDarkMode = 'assets/images/darkMode.svg';
   static const String imagesEmail = 'assets/images/email.png';
   static const String imagesGoogle = 'assets/images/google.png';
+  static const String imagesGoogleIcon = 'assets/images/googleIcon.png';
   static const String imagesHide = 'assets/images/hide.png';
   static const String imagesLightMode = 'assets/images/lightMode.svg';
   static const String imagesLock = 'assets/images/lock.png';
   static const String imagesSee = 'assets/images/see.png';
   static const String imagesSoftwie = 'assets/images/softwie.png';
+  static const String imagesSoftwieLogo = 'assets/images/softwieLogo.png';
 
 }
